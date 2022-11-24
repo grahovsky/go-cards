@@ -6,12 +6,14 @@ import (
 
 func main() {
 
-	// var card string = "Ace of Speads"
-	card := "Ace of Speads"
-	card = "Five of Diamonds"
+	card := newCard()
 	fmt.Println(card)
 
-	// var card1 = true
-	// fmt.Println(reflect.TypeOf(card1))
+	//printState()
+	// go run main.go state.go
 
+}
+
+func newCard() string {
+	return "Five of Diamonds"
 }
