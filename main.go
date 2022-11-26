@@ -6,11 +6,12 @@ import (
 
 func main() {
 
-	card := newCard()
-	fmt.Println(card)
+	cards := []string{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades")
 
-	//printState()
-	// go run main.go state.go
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 
 }
 
