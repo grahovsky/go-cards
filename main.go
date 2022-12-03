@@ -1,5 +1,7 @@
 package main
 
+import "log"
+
 func main() {
 
 	cards := newDeck()
@@ -8,5 +10,10 @@ func main() {
 
 	hand.print()
 	remainingDeck.print()
+
+	err := hand.saveToFile("saveData")
+	if err != nil {
+		log.Fatal(err)
+	}
 
 }
