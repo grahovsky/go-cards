@@ -1,19 +1,21 @@
 package main
 
-import "log"
-
 func main() {
 
-	cards := newDeck()
+	// cards := newDeck()
 
-	hand, remainingDeck := deal(cards, 5)
+	// hand, remainingDeck := deal(cards, 5)
 
-	hand.print()
-	remainingDeck.print()
+	// hand.print()
+	// remainingDeck.print()
 
-	err := hand.saveToFile("saveData")
-	if err != nil {
-		log.Fatal(err)
-	}
+	// err := hand.saveToFile("saveData")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	cards := newDeckFromFile("saveData")
+	cards.shuffle()
+	cards.print()
 
 }
